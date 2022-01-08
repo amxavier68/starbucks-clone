@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack serve --open --env env=dev",
+    "build": "webpack --env env=prod",
+    "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
   },
   "keywords": [],
   "author": "",
@@ -13,12 +18,16 @@
     "core-js": "^3.20.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^6.2.1"
+    "react-router-dom": "^6.2.1",
+    "typescript": "^4.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
     "eslint": "^7.32.0",
@@ -34,6 +43,7 @@
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.6",
     "prettier": "^2.5.1",
     "styles-loader": "^3.0.0",
     "webpack": "^5.65.0",
