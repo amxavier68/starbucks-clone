@@ -1,11 +1,28 @@
 import React from "react";
+
 import "../../public/css/styles.css";
+
+import Navbar from "./layout/Navbar";
+import Header from "./layout/Header";
+import Feature from "./layout/Feature";
+import Special from "./layout/Special";
+import Showcase from "./layout/Showcase";
+import Support from "./layout/Support";
+import DeliveryMedia from "./layout/Delivery-Media";
+import Footer from "./layout/Footer";
 
 const App = () => {
   return (
-    <div>
-      <h1>Starbucks - Clone</h1>
-    </div>
+    <>
+      <Navbar />
+      <Header />
+      <Feature />
+      <Special />
+      <Showcase />
+      <Support />
+      <DeliveryMedia />
+      <Footer />
+    </>
   );
 };
 
