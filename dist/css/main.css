@@ -57,6 +57,12 @@ p {
 img {
   width: 100%; }
 
+.divider {
+  width: 95%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 4rem; }
+
 body {
   font-family: 'Open Sans', sans-serif; }
 
@@ -92,7 +98,10 @@ body {
     max-width: 50rem;
     text-align: center;
     justify-self: center;
-    padding: 2rem 0; }
+    padding: 2rem 0;
+    margin: 0 auto; }
+  .box-f .box-text {
+    max-width: 600px; }
   .box button {
     margin-top: 2rem; }
 
@@ -125,6 +134,55 @@ body {
     color: #fff; }
     .btn-light-outline:hover {
       background-color: rgba(0, 0, 0, 0.06); }
+
+.navbar-container .hamburger {
+  cursor: pointer;
+  width: 2.4rem;
+  height: 2.4rem;
+  position: relative;
+  background: none;
+  border: none;
+  z-index: 10;
+  transition: all .2s;
+  display: none; }
+  .navbar-container .hamburger-top, .navbar-container .hamburger-middle, .navbar-container .hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.4rem;
+    height: .2rem;
+    background-color: #000;
+    transform: rotate(0);
+    transition: all .5s; }
+  .navbar-container .hamburger-middle {
+    transform: translateY(0.7rem); }
+  .navbar-container .hamburger-bottom {
+    transform: translateY(1.4rem); }
+
+.navbar-container .open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px); }
+
+.navbar-container .open .hamburger-middle {
+  display: none; }
+
+.navbar-container .open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(-6px) translateX(-6px); }
+
+.social {
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  margin: 2rem 0; }
+  .social a {
+    margin-right: 2rem; }
+
+.footer-container {
+  width: 100vw;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 3rem 3rem; }
+  .footer-container-text {
+    font-size: 1.9rem; }
 
 .grid-col-2 {
   display: grid;
@@ -178,6 +236,22 @@ body {
 section a {
   color: #fff; }
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; }
+  .grid-col-2 {
+    grid-template-columns: 1fr; }
+  .grid-reversed :first-child {
+    order: 0; }
+  .navbar-brand img {
+    width: 4rem;
+    height: 4rem; }
+  .navbar .navbar-nav-left,
+  .navbar .navbar-nav-right {
+    display: none; }
+  .footer {
+    text-align: center; } }
+
 @media (max-width: 960px) {
   .text-xl {
     font-size: 3rem; }
@@ -190,7 +264,9 @@ section a {
   .box {
     max-width: 144rem;
     margin-right: auto;
-    margin-left: auto; } }
+    margin-left: auto; }
+  .divider {
+    max-width: 90%; } }
 
 
 /*# sourceMappingURL=main.css.map*/

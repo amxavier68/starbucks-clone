@@ -41,6 +41,13 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
+
+        {/* Hamburger Menu */}
+        <button type="button" className="hamburger" id="menu-btn">
+          <span className="hamburger-top"></span>
+          <span className="hamburger-middle"></span>
+          <span className="hamburger-bottom"></span>
+        </button>
       </div>
     </nav>
   );

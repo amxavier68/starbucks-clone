@@ -14,7 +14,7 @@ const Delivery = () => {
             Make the moment merry. Order Starbucks&reg; holiday favorites on
             Uber Eats.*
           </p>
-          <button className="btn btn-light-outline">
+          <button className="btn btn-dark-outline">
             <Link to="/">Order now</Link>
           </button>
         </div>

@@ -25,10 +25,14 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
-      linkType: 'text/css'
+      linkType: 'text/css',
+      runtime: false,
+      experimentalUseImportModule: true,
+      chunkFilename: "css/[id].css",
+      ignoreOrder: false,
     }),
     new CompressionPlugin({
-      compressionOptions: { level: 1 },
+      compressionOptions: { level: 3 },
     }),
   ],
 
@@ -56,6 +60,16 @@ module.exports = {
         type: "asset/inline",
       },
     ],
+  },
+
+  optimization: {
+    chunkIds: 'named',
+    concatenateModules: true,
+    emitOnErrors: true,
+    flagIncludedChunks: true,
+    mergeDuplicateChunks: false,
+    minimize: false,
+    nodeEnv: 'production',
   },
 
   resolve: {

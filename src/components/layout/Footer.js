@@ -25,7 +25,9 @@ const Footer = () => {
             <i className="fab fa-twitter"></i>
           </Link>
         </div>
-        <p>&copy; 2022 Starbucks Coffee Company. All rights reserved.</p>
+        <p className="footer-container-text">
+          &copy; 2022 Starbucks Coffee Company. All rights reserved.
+        </p>
       </div>
     </footer>
   );

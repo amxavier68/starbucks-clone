@@ -21,6 +21,7 @@ const App = () => {
       <Showcase />
       <Support />
       <DeliveryMedia />
+      <div className="divider"></div>
       <Footer />
     </>
   );
